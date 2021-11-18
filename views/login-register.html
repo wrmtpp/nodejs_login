@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LOGIN AND REGISTER SYSTEM</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="full-page">
+      <div class="navigation-bar">
+        <div class="logo">
+          <a href="/">LOGIN AND REGISTER SYSTEM</a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Photos</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--Login -->
+
+      <div class="row">
+        <div class="col-1">
+          <div class="form-box">
+            <div class="form">
+              <form action="" method="POST">
+                <div class="form-group">
+
+                  <center><h1 class="main-heading">Login Form</h1></center>
+
+                  <input
+                    type="text"
+                    name="user_email"
+                    id="_email"
+                    class="form-control"
+                    placeholder="Email"
+                    noderequired
+                  />
+
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="user_pass"
+                    id="_pass"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+
+                <% if (locals.login_errors) {
+                login_errors.forEach(function(error_msg){ %>
+                <div class="alert alert-danger" role="alert">
+                  <%= error_msg %>
+                </div>
+                <% }); } %>
+                <button type="submit" class="btn btn-primary">Login</button>
+
+              </form>
+              <br/>
+              <br/>
+
+
+
+                                 <!-- REGISTER -->
+
+                <!-- <center><h1 class="main-heading">Register Form</h1></center>
+                <form action="/register" method="POST" novalidate>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="user_name"
+                      id="_rname"
+                      class="form-control"
+                      placeholder="Name"
+                      value="<%= (locals.old_data) ? old_data.user_name : ''; %>"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="user_email"
+                      id="_remail"
+                      class="form-control"
+                      placeholder="Email"
+                      value="<%= (locals.old_data) ? old_data.user_email : ''; %>"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="user_pass"
+                      id="_rpass"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                  </div>
+
+                  <% if (locals.register_error) {
+                  register_error.forEach(function(error_msg){ %>
+                  <div class="alert alert-danger" role="alert">
+                    <%= error_msg %>
+                  </div>
+                  <% }); } %>
+
+                  <button type="submit" class="btn btn-success">Sign Up</button>
+                </form> -->
+              </form>
+
+              
+            </div>
+
+            
+          </div>
+
+          
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <div class="form-box">
+              <div class="form">
+          
+          <center><h1 class="main-heading">Register Form</h1></center>
+          <form action="/register" method="POST" novalidate>
+            <div class="form-group">
+              <input
+                type="text"
+                name="user_name"
+                id="_rname"
+                class="form-control"
+                placeholder="Name"
+                value="<%= (locals.old_data) ? old_data.user_name : ''; %>"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="user_email"
+                id="_remail"
+                class="form-control"
+                placeholder="Email"
+                value="<%= (locals.old_data) ? old_data.user_email : ''; %>"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                name="user_pass"
+                id="_rpass"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <% if (locals.register_error) {
+            register_error.forEach(function(error_msg){ %>
+            <div class="alert alert-danger" role="alert">
+              <%= error_msg %>
+            </div>
+            <% }); } %>
+
+            <button type="submit" class="btn btn-success">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+          <p class="defination">
+            Login & Registration<br />
+            -HTML <br />
+            -CSS,Bootstrap<br />
+            -Node.Js,MYSQL<br />
+          </p>
+     
+</body>
+
+                                                    <!-- CSS-->
+
+
+
+  <style>
+    .full-page {
+      
+      width: 100%;
+      height: 100vh;
+      background: url("https://wallpapercave.com/wp/wp6350571.jpg");
+      background-size: cover;
+    }
+    .navigation-bar {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      padding-left: 80px;
+      padding-right: 30px;
+      padding-top: 50px;
+    }
+
+    .logo {
+      position: fixed;
+      margin-top: 10px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: white;
+      font-size: 30px;
+    }
+
+    nav {
+      flex: 1;
+      position: fixed;
+      right: 0;
+    }
+
+    nav ul {
+      display: inline-block;
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 90px;
+      margin-top: 17px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    nav ul li a:hover {
+      color: rgb(250, 250, 250);
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .col-1 {
+      flex-basis: 50%;
+      min-width: 500px;
+    }
+
+     .form-box {
+      width: 400px;
+      height: 470px;
+      position: relative;
+      top: 100px;
+      left: 50px;
+      background: rgba(114, 114, 114, 0.123);
+    } 
+
+    .main-heading {
+      color: rgb(255, 255, 255);
+      padding-bottom: 25px;
+
+    }
+
+    .form {
+      position: relative;
+      padding: 70px;
+      text-align: center;
+    }
+
+    .form input {
+      border-bottom: 1px solid rgb(160, 147, 147);
+      width: 100%;
+      margin: 0 0 15px;
+      padding: 15px;
+      font-size: 14px;
+    } 
+
+    .form button {
+      font-family: sans-serif;
+      width: 100%;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 15px;
+      border: none;
+      background: coral;
+    } 
+    .defination {
+      padding-top: 200px;
+      padding-right: 70px;
+      font-size: 30px;
+      color: white;
+      font-family: "Kaushan Script";
+    }
+
+  </style>
+</html>

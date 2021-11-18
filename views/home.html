@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+
+    <div class="full-page">
+      <div class="navigation-bar">
+        <div class="logo">
+          <a href="/">LOGIN AND REGISTER SYSTEM</a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Photos</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="container p-5">
+  
+          <h5 align = 'right'>Hello, <%= name %></h5>
+          <h1 align = 'right'>  <a href="/logout" class="btn btn-danger">Logout</a>
+
+            <div class="content">
+              <div class="phuket" style="width:50%;">
+                <div class="tnx">
+                  <h2><i class="fas fa-map-marker-alt"></i> From China</h2>
+                </div>
+                <div class="txt">
+                  <h1>PUG</h1>
+                  <h1>DOG</h1>
+                </div>
+              </div>
+              <div class="card" style="width: 40%;">
+                <!-- <a href="https://www.google.com/" target="_blank"> -->
+                  <div class="box1">
+                    <h2>Lucky</h2>
+                  </div>
+                </a>
+                <!-- <a href="https://www.google.com/" target="_blank"> -->
+                  <div class="box2">
+                    <h2>Tony</h2>
+                  </div>
+                </a>
+                <!-- <a href="https://www.google.com/" target="_blank"> -->
+                  <div class="box3">
+                    <h2>Balloon</h2>
+                  </div>
+                </a>
+                <!-- <a href="https://www.google.com/" target="_blank"> -->
+                  <div class="box4">
+                    <h2>Cookie</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+          
+          </div>
+            
+       
+    </div>
+ 
+
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+    }
+    .container{
+      float: right;
+
+      
+    }
+
+    .full-page {
+      
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url("https://wallpapercave.com/wp/wp6350571.jpg");
+      background-size: cover;
+    }
+    .navigation-bar {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      padding-left: 80px;
+      padding-right: 30px;
+      padding-top: 50px;
+    }
+
+    .logo {
+      position: fixed;
+      margin-top: 10px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: white;
+      font-size: 30px;
+    }
+
+    nav {
+      flex: 1;
+      position: fixed;
+      right: 0;
+    }
+
+    nav ul {
+      display: inline-block;
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 90px;
+      margin-top: 17px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    nav ul li a:hover {
+      color: rgb(250, 250, 250);
+    }
+    h5{
+      color: rgb(250, 250, 250);
+    }
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+.phuket {
+  color: #fff;
+  padding-inline-end: 20%;
+}
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: none;
+  color-interpolation-filters: auto;
+  
+
+}
+.card h2 {
+  color: #fff;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+.card .box1,
+.box2,
+.box3,
+.box4 {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;   
+}
+.box1 {
+  background-image: url("https://i.pinimg.com/originals/b4/81/cb/b481cb8935ecc6cc3e602c6f0183dc5a.jpg");
+}
+.box2 {
+  background-image: url("https://i.pinimg.com/474x/fb/a1/43/fba1439929704270d55448ef3fc6c97c.jpg");
+}
+.box3 {
+  background-image: url("https://i.pinimg.com/236x/34/bb/98/34bb98e600313bb2f95becc05dedd321.jpg");
+}
+.box4 {
+  background-image: url("https://i.pinimg.com/474x/16/8b/4e/168b4ec98c898adf49d567c707a54911--dog-shop-the-pug.jpg");
+}
+.phuket h2 {
+  font-size: 2rem;
+  letter-spacing: 2.8px;
+}
+.text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.txt h1 {
+  font-size: 7rem;
+}
+.phuket p {
+  opacity: 0.4;
+}
+.tnx h2 i {
+  color: #fd7e13;
+}
+.card div {
+  transition: 1.0s;
+}
+.card div:hover {
+  transition: 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+
+
+
+
+
+  </style>
+</html>
